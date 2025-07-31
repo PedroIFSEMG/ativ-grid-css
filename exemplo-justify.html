@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid - Justify Items vs Justify Content</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    .wrapper {
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      grid-template-rows: 100px;
+      gap: 10px;
+      background-color: #B2EBF2;
+      padding: 20px;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .justify-items-example {
+      justify-items: center;
+    }
+
+    .justify-content-example {
+      justify-content: center;
+    }
+
+    .item {
+      background-color: #004D61;
+      color: white;
+      font-weight: bold;
+      padding: 10px 40px; /* Padding extra para mostrar diferença */
+      border-radius: 5px;
+    }
+
+    .box-title {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Diferença entre <code>justify-items</code> e <code>justify-content</code> no CSS Grid</h1>
+
+  <div class="wrapper">
+
+    <!-- Justify Items -->
+    <div>
+      <div class="box-title">🎯 justify-items: center</div>
+      <div class="container justify-items-example">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </div>
+
+    <!-- Justify Content -->
+    <div>
+      <div class="box-title">📦 justify-content: center</div>
+      <div class="container justify-content-example">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </div>
+
+  </div>
+
+  <p style="margin-top: 40px;">
+    ✅ <strong>justify-items:</strong> centraliza o <em>conteúdo dentro das células</em><br>
+    ✅ <strong>justify-content:</strong> centraliza o <em>grid inteiro dentro do container</em><br>
+    🔍 Com <code>padding</code> nos itens, a diferença fica ainda mais visível.
+  </p>
+
+</body>
+</html>
